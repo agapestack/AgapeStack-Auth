@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import './plugins/bootstrap-vue'
+import 'bootswatch/dist/slate/bootstrap.min.css'
 import './plugins/axios'
 import App from './App.vue'
 import './registerServiceWorker'

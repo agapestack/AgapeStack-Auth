@@ -1,13 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">| Home |</router-link>
-      <router-link to="/secure">Secure |</router-link>
-      <router-link to="/register" v-if="!isLoggedIn">Register |</router-link>
-      <router-link to="/login" v-if="!isLoggedIn">Login |</router-link>
-      <span v-if="isLoggedIn"> | <a @click="logout">Logout |</a></span>
-    </div>
-    <router-view/>
+
+    <main>
+      <router-view/>
+    </main>
+    
   </div>
 </template>
 
@@ -43,5 +40,13 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 </style>

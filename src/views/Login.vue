@@ -1,13 +1,24 @@
 <template>
  <div>
-   <form class="login" @submit.prevent="login">
-     <h1>Sign in</h1>
-     <label>Email</label>
-     <input required v-model="email" type="email" placeholder="Name"/>
-     <label>Password</label>
-     <input required v-model="password" type="password" placeholder="Password"/>
-     <hr/>
-     <button type="submit">Login</button>
+  <form class="login" @submit.prevent="login">
+
+      <h1>Sign in</h1>
+    
+    <br />
+    <label>Email</label>
+    <b-form-input required v-model="email" type="email" placeholder="Email"/>
+    <label>Password</label>
+    <b-form-input required v-model="password" type="password" placeholder="Password"/>
+
+
+    <br/>
+    <hr/>
+    <b-button type="submit">Login</b-button>
+
+    <br/>
+    <router-link to="/register">Not Account? register now!</router-link>
+    <router-link to="/">Home</router-link>
+     
    </form>
  </div>
 </template>
@@ -33,6 +44,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+form.login {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: 3rem;
+  border-radius: 10px;
+}
 
 </style>
